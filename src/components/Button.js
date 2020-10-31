@@ -5,7 +5,7 @@ function Button({ bg, bold = "normal", color = "#000000", title, onClick }) {
       className="btn"
       onClick={onClick}
       style={{
-        background: bg ? bg : "#e6e6e6",
+        background: bg ? bg : "#c6e6e6",
         color: color,
         fontWeight: bold,
       }}

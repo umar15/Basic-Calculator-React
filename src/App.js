@@ -19,7 +19,7 @@ function App() {
     }
   };
 
-  const keydownPress = (e) => {
+  const keyDownPress = (e) => {
     if (e.keyCode === 8) {
       if (main !== 0) {
         setMain(main.slice(0, -1) !== "" ? main.slice(0, -1) : 0);
@@ -96,7 +96,7 @@ function App() {
       <div
         className="textFieldWrapper"
         tabIndex="1"
-        onKeyDown={(event) => keydownPress(event)}
+        onKeyDown={(event) => keyDownPress(event)}
         onKeyPress={(event) => handleKeyPress(event)}
       >
         <TextField text={history} className="history" />
@@ -104,15 +104,15 @@ function App() {
       </div>
 
       <div className="btnWrapper">
-        <Button bg="c9c9c9" title="(" />
-        <Button bg="c9c9c9" title=")" />
-        <Button onClick={() => operationHandler("%")} bg="c9c9c9" title="%" />
+        <Button bg="#c9c9c9" title="(" />
+        <Button bg="#c9c9c9" title=")" />
+        <Button onClick={() => operationHandler("%")} bg="#c9c9c9" title="%" />
         <Button
           onClick={() => {
             setMain(0);
             setHistory("");
           }}
-          bg="c9c9c9"
+          bg="#c9c9c9"
           title="CE"
         />
       </div>
@@ -121,27 +121,27 @@ function App() {
         <Button onClick={() => numberHandler(7)} title="7" />
         <Button onClick={() => numberHandler(8)} title="8" />
         <Button onClick={() => numberHandler(9)} title="9" />
-        <Button onClick={() => operationHandler("/")} bg="c9c9c9" title="/" />
+        <Button onClick={() => operationHandler("/")} bg="#c9c9c9" title="/" />
       </div>
 
       <div className="btnWrapper">
         <Button onClick={() => numberHandler(4)} title="4" />
         <Button onClick={() => numberHandler(5)} title="5" />
         <Button onClick={() => numberHandler(6)} title="6" />
-        <Button onClick={() => operationHandler("*")} bg="c9c9c9" title="*" />
+        <Button onClick={() => operationHandler("*")} bg="#c9c9c9" title="*" />
       </div>
 
       <div className="btnWrapper">
         <Button onClick={() => numberHandler(1)} title="1" />
         <Button onClick={() => numberHandler(2)} title="2" />
         <Button onClick={() => numberHandler(3)} title="3" />
-        <Button onClick={() => operationHandler("-")} bg="c9c9c9" title="-" />
+        <Button onClick={() => operationHandler("-")} bg="#c9c9c9" title="-" />
       </div>
 
       <div className="btnWrapper">
         <Button onClick={() => numberHandler(0)} title="0" />
         <Button onClick={() => operationHandler(".")} title="." />
-        <Button onClick={() => operationHandler("+")} title="+" />
+        <Button onClick={() => operationHandler("+")} bg="#c9c9c9" title="+" />
         <Button
           onClick={() => equalHandler()}
           bg="#4285f4"
